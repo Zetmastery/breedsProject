@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {View, Text, TouchableOpacity, Image, ScrollView} from 'react-native';
 import {useDispatch, useSelector} from 'react-redux';
 import {setStarred} from '../store/actions';
@@ -9,6 +9,7 @@ const Profile = () => {
   const navigation = useNavigation();
   const dispatch = useDispatch();
   const {starred} = useSelector(state => state.breeds);
+  const {user} = useSelector(state => state.account);
 
   return (
     <ScrollView>
@@ -38,6 +39,9 @@ const Profile = () => {
           />
           <Text style={{fontSize: 18, color: 'black'}}>Name: Jhon Doe</Text>
           <Text style={{fontSize: 18, color: 'black'}}>Age: 34</Text>
+          <Text style={{fontSize: 18, color: 'black'}}>
+            email: {user.email}
+          </Text>
         </View>
         <View>
           <Title>Favorite breeds</Title>
