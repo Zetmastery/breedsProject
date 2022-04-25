@@ -1,0 +1,6 @@
+export const GET_BREEDS = 'GET_BREEDS';
+export const GET_BREEDS_ASYNC = 'GET_BREEDS_ASYNC';
+export const SET_STARRED = 'SET_STARRED';
+export const SET_STARRED_ASYNC = 'SET_STARRED_ASYNC';
+export const GET_DETAILS = 'GET_DETAILS';
+export const GET_DETAILS_ASYNC = 'GET_DETAILS_ASYNC';
