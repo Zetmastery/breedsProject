@@ -39,11 +39,12 @@ const Details = () => {
           <Title>Sub breeds</Title>
           <View>
             {subs &&
-              subs.map(element => {
+              subs.map((element, index) => {
                 return (
-                  <View>
+                  <View key={index}>
                     <Title key={element[0]}>{element[0]}</Title>
                     <Image
+                      key={`${element[0]},${index}`}
                       style={{width: 200, height: 200}}
                       source={{uri: `${element[1]}`}}
                     />
