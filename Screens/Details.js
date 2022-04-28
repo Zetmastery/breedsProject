@@ -16,7 +16,7 @@ const Details = () => {
         <View style={{flexDirection: 'row'}}>
           <Title>{titular ? titular[0][0] : 'Loading...'}</Title>
           <TouchableOpacity onPress={() => dispatch(setStarred(titular[0][0]))}>
-            {starred && starred.includes(titular[0][0]) ? (
+            {titular && starred && starred.includes(titular[0][0]) ? (
               <Image
                 source={require('../assets/colored-star.png')}
                 style={{width: 30, height: 30, marginLeft: 10}}
